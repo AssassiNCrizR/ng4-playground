@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ myObject.location }}!
+  </h1>
+  <img width="200" alt="Angular Logo" [src]="angularLogo">
+  <button [disabled]="buttonStatus == 'enabled'">Just A Disabled Button</button>
+  <button [@myAwesomeAnimation]='state' (click)="animateMe()" [ngStyle]="borderStyles" [ngClass]="dynamicClasses" (click)="myEvent($event)">Eventful Button</button>
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>
+<app-my-new-component></app-my-new-component>
+<ul>
+	<li *ngFor="let arr of myArr">{{ arr }}</li>
+</ul>
+<div *ngIf = "myBool; then truthTmpl else elseBoolTmpl"></div>
+<ng-template #truthTmpl> I exist because I'm a boolean valued TRUE </ng-template>
+<ng-template #elseBoolTmpl> Oh No, the boolean is FALSE </ng-template>
+<p>{{someProperty}}</p>
